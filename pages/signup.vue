@@ -225,6 +225,7 @@
 
 <script>
 import Vue from "vue";
+import { API_LINK } from "../utils/api";
 import zxcvbn from "zxcvbn";
 import { countryList } from "../utils/countries";
 import VuePhoneNumberInput from "vue-phone-number-input";
@@ -270,7 +271,7 @@ export default {
           this.$refs.signupBtn.disabled = true;
           this.$refs.signupBtn.style.cursor = "not-allowed";
           await this.$axios
-            .$post(process.env.APP_BASE_URL + "auth/register", {
+            .$post(API_LINK + "auth/register", {
               email: `${this.email}`,
               password: `${this.password}`,
               name: `${this.name}`,

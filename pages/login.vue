@@ -113,6 +113,7 @@
 
 <script>
 import Vue from "vue";
+import { API_LINK } from "../utils/api";
 export default {
   layout: "auth",
   head() {
@@ -141,7 +142,7 @@ export default {
       this.$axios.setHeader("Accept", "application/json");
       this.$axios.setHeader("Content-Type", "application/json");
       await this.$axios
-        .$post(process.env.APP_BASE_URL + "auth/login", {
+        .$post(API_LINK + "auth/login", {
           email: `${this.email}`,
           password: `${this.password}`,
         })

@@ -179,6 +179,7 @@
 
 <script>
 import Vue from "vue";
+import { API_LINK } from "../utils/api";
 export default {
   layout: "auth",
   head() {
@@ -224,7 +225,7 @@ export default {
       let token = localStorage.getItem("codedEvents_USER_TOKEN");
       this.$axios.setHeader("Authorization", `Bearer ${token}`);
       await this.$axios
-        .$post(process.env.APP_BASE_URL + "auth/email/verify", {
+        .$post(API_LINK + "auth/email/verify", {
           token: otp,
         })
         .then((res) => {

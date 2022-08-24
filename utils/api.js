@@ -1,0 +1,1 @@
+export const API_LINK = "https://api.codedevents.com/"

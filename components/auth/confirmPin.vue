@@ -134,6 +134,7 @@
 
 <script>
 import Vue from "vue";
+import { API_LINK } from "../../utils/api";
 export default {
   props: ["email"],
   data() {
@@ -163,7 +164,7 @@ export default {
       let otp = Number(this.a + this.b + this.c + this.d);
 
       await this.$axios
-        .$post(process.env.APP_BASE_URL + "auth/password/token", {
+        .$post(API_LINK + "auth/password/token", {
           email: `${this.email}`,
           token: otp,
         })

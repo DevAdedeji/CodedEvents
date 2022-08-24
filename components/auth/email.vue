@@ -59,6 +59,7 @@
 
 <script>
 import Vue from "vue";
+import { API_LINK } from "../../utils/api";
 export default {
   data() {
     return {
@@ -68,7 +69,7 @@ export default {
   methods: {
     async sendConfirmationPin() {
       await this.$axios
-        .$post(process.env.APP_BASE_URL + "auth/password/email", {
+        .$post(API_LINK + "auth/password/email", {
           email: `${this.email}`,
         })
         .then((res) => {

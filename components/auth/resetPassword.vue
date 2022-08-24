@@ -90,7 +90,7 @@
 
 <script>
 import Vue from "vue";
-
+import { API_LINK } from "../../utils/api";
 import zxcvbn from "zxcvbn";
 export default {
   props: ["email", "token"],
@@ -114,7 +114,7 @@ export default {
         } else {
           this.$axios.setHeader("Authorization", `Bearer ${this.token}`);
           await this.$axios
-            .$post(process.env.APP_BASE_URL + "auth/password/reset", {
+            .$post(API_LINK + "auth/password/reset", {
               email: `${this.email}`,
               password: `${this.password}`,
             })
