@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Basis Grotesque Pro";
+    src: local("Basis Grotesque Pro"),
+     url("../Basis-Grotesque-Pro.ttf") format("truetype");
+}
+
+
+input:focus {
+    outline: 2px solid #bdbdbd !important;
+  }
