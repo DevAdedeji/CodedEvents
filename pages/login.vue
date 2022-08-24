@@ -77,7 +77,7 @@
             required
           />
         </div>
-        <!-- Forgot Your Password -->
+
         <div class="w-full flex justify-end">
           <a href="/forgot-password" class="underline text-grey3 ml-auto"
             >Forgot your password</a
@@ -113,7 +113,6 @@
 
 <script>
 import Vue from "vue";
-import axios from "axios";
 export default {
   layout: "auth",
   head() {
@@ -195,7 +194,6 @@ export default {
         });
     },
   },
-  components: {},
 };
 </script>
 

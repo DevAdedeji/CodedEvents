@@ -52,7 +52,7 @@ export default {
  
    // Axios module configuration: https://go.nuxtjs.dev/config-axios
    env: {
-     baseUrl: process.env.BASE_URL
+     baseUrl: process.env.APP_BASE_URL
    },
    axios: {
      // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
